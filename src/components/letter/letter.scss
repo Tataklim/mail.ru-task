@@ -1,0 +1,106 @@
+.letter:hover {
+    transition: 0.1s;
+    transform: scale(1.002);
+    box-shadow: 0 1px 20px 0 rgba(0, 0, 0, 0.06);
+}
+
+.letter {
+    border-bottom: 1px solid rgba(200, 199, 199, 0.12);
+    display: flex;
+    padding-top: 10px;
+    padding-bottom: 4px;
+    padding-right: 16px;
+
+
+    &__name {
+        margin: auto 0;
+        width: 100px;
+        white-space: nowrap;
+        text-overflow: clip;
+        overflow: hidden;
+        font-size: 14px;
+        font-family: Montserrat-Light, serif;
+    }
+
+    &__author {
+        font-size: 18px;
+        width: 100px;
+        text-align: center;
+    }
+
+    &__avatar {
+        z-index: -10;
+        height: 80px;
+        width: 80px;
+        border-radius: 100px;
+        box-shadow: 0 1px 20px rgba(12, 12, 12, 0.2);
+        object-fit: cover;
+        transition: 0.3s;
+
+        :hover {
+            opacity: 0.5;
+        }
+    }
+
+    &__select-image {
+        z-index: 10;
+        background-image: url(../../img/check_circle_outline-24px.svg);
+        background-size: 100%;
+        margin-top: -95px;
+        height: 100px;
+        width: 100px;
+        border-radius: 100px;
+        box-shadow: 0 1px 20px rgba(12, 12, 12, 0.2);
+        object-fit: cover;
+        opacity: 0;
+
+        &:hover {
+            transition: 0.3s;
+            opacity: 0.3;
+        }
+    }
+
+    &__checkbox {
+        opacity: 1;
+        margin-left: 50px;
+        margin-right: -50px;
+    }
+
+    &__content {
+        border-radius: 1px 40px 40px 40px;
+        display: flex;
+        width: 100%;;
+        padding-left: 8px;
+    }
+
+    &__theme {
+        min-width: 200px;
+        margin: auto 0;
+        border-right: 1px solid rgba(200, 199, 199, 0.33);
+        white-space: nowrap;
+        text-overflow: clip;
+        overflow: hidden;
+    }
+
+    &__snippet {
+        padding-left: 16px;
+        margin: auto 0;
+        font-size: 16px;
+    }
+}
+
+.selected {
+    transition: 0.3s;
+    opacity: 0.4;
+
+    &:hover {
+        transition: 0.3s;
+        opacity: 0.6;
+    }
+}
+
+.selected-avatar {
+    transition: 0.3s;
+    opacity: 0.6;
+}
+
