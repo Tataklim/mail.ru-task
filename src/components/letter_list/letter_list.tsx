@@ -20,16 +20,13 @@ class LetterList extends React.Component<any, object> {
     }
 
     changeSet() {
-        console.log('changeSet')
         this.setState((state) => {
             return {toChange: !this.state.toChange};
         });
     }
 
     render() {
-        console.log('render')
         const letterList = this.props.data
-        console.log(letterList)
         const letterListTemplate = this.generateTemplate(letterList)
         return <div className="letter-list">
             {

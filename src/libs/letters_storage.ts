@@ -45,7 +45,6 @@ class Letters {
     }
 
     deleteSelectedLetters() {
-        console.log('deleteSelectedLetters')
         if (this.isAllSelected) {
             return this.deleteAllLetters()
         }
@@ -60,9 +59,6 @@ class Letters {
                 this.lettersActive.splice(elem, 1)
             })
         this.lettersToDelete = []
-        console.log(this.lettersToDelete)
-        console.log(this.lettersActive)
-        // globalEventBus.emit(EVENTBUS.RENDER_LETTERS)
         globalEventBus.emit(EVENTBUS.CHANGE_LIST_STATE)
 
     }
@@ -71,10 +67,7 @@ class Letters {
         this.lettersActive.length = 0
         this.lettersToDelete = []
         this.isAllSelected = false
-        console.log('deleteAllLetters')
-        console.log(this.lettersActive)
         globalEventBus.emit(EVENTBUS.CHANGE_LIST_STATE)
-        // globalEventBus.emit(EVENTBUS.RENDER_EMPTY)
     }
 
     /**

@@ -24,7 +24,6 @@ export default class ReactHelper {
     }
 
     renderLetters() {
-        console.log('RERENDER')
         if (this.isStorybook) {
             return <div>
                 <Menu/>
